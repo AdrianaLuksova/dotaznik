@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Výsledky dotazníku</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+        <tr>
+            <th>Jméno/přezdívka</th>
+            <th>Datum</th>
+            <th>Čas</th>
+            <th>počet</th>
+            <th>krmivo</th>
+            <th>znalost</th>
+        </tr>
+        <% responses.forEach(function(response) { 
+            const date = new Date(response.timestamp);
+            const dateString = `${('0' + date.getDate()).slice(-2)}.${('0' + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}`;
+            const timeString = `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}:${('0' + date.getSeconds()).slice(-2)}`;
+        %>
+            <tr>
+                <td><%= response.answers.roleModel %></td>
+                <td><%= dateString %></td>
+                <td><%= timeString %></td>
+                <td><%= response.answers.pocet %></td>
+                <td><%= response.answers.krmivo %></td>
+                <td><%= response.answers.znalost %></td>
+            </tr>
+        <% }); %>
+        </table>
+    </div>  
+</body>
+<footer>
+    <p>&copy; 2024 Adriana Luksová IT2</p>
+  </footer>
+</html>

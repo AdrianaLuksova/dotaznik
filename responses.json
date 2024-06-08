@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2024-06-09T12:30:00.000Z",
+    "answers": {
+      "roleModel": "John",
+      "pocet": 2,
+      "krmivo": "Royal Canin",
+      "znalost": 4
+    }
+  },
+  {
+    "id": 2,
+    "timestamp": "2024-06-09T13:45:00.000Z",
+    "answers": {
+      "roleModel": "Alice",
+      "pocet": 1,
+      "krmivo": "Brit Care",
+      "znalost": 3
+    }
+  },
+  {
+    "id": 1717858762096,
+    "timestamp": "2024-06-08T14:59:22.096Z",
+    "answers": {
+      "roleModel": "mnau",
+      "pocet": "2",
+      "krmivo": "Brit Care",
+      "znalost": "3"
+    }
+  }
+]

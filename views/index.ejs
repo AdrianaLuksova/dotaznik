@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotazník na téma péče o kočky</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+    <header>
+        <h1>Dotazník na téma péče o kočku</h1>
+      </header>
+<body>
+    
+    <form action="/submit" method="post" class="form-container">
+        <div>
+            <label for="roleModel">Vaše jméno/přezdívka:</label>
+            <input type="text" id="roleModel" name="roleModel" required>
+        </div>
+        
+        <div>
+            <label for="pocet">Kolik koček vlastníte?</label>
+            <input type="number" step="1" id="pocet" name="pocet" required min="0" max="24">
+        </div>
+        
+        <div>
+            <label>Kterou značku krmiva kupujete?</label>
+            <select id="krmivo" name="krmivo">
+                <option value="Ontario ">Ontario</option>
+                <option value="Brit Care">Brit Care</option>
+                <option value="Royal Canin">Royal Canin</option>
+                <option value="Prospera">Prospera</option>
+                <option value="Vitakraft">Vitakraft</option>
+            </select>
+        </div>
+        
+        <div class="clearfix">
+            <label for="znalost">Jak hodnotíte svou znalost chovu koček?</label>
+            <input type="range" id="znalost" name="znalost" min="1" max="5" step="1">
+            <span id="znalostValue"></span>
+        </div>
+        
+        <div class="button-container">
+            <button type="submit" class="submit-button">Odeslat odpovědi</button>
+        </div>
+    </form>
+    <script>
+        const slider = document.getElementById('znalost');
+        const output = document.getElementById('znalostValue');
+        output.innerHTML = slider.value;
+      
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; 2024 Adriana Luksová IT2</p>
+  </footer>
+</html>
